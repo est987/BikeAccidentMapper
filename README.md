@@ -18,6 +18,6 @@ Data collected includes:
  1. Convert google alert to new entry.
  2. Automatically update web map
  
- This is my first personal programming project, so I will appreciate any tips and advice.
+ This is my first personal open-source public project, so I will appreciate any tips and advice.
  
  
