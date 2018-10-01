@@ -1,4 +1,4 @@
-* Bike Accident Mapper
+## Bike Accident Mapper
 
 I receive daily Google Alerts about bike related news in Israel. 
 I decided to start collecting data on bike accidents in which a automobile was involved.
