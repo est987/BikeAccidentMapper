@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/MarkerCluster.css">
+        <link rel="stylesheet" href="css/MarkerCluster.Default.css">
+        <style>
+        #map {
+            width: 752px;
+            height: 557px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet.markercluster.js"></script>
+        <script src="data/BikeAccidents_1.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[31.608193820699316,34.54480049137832],[31.669628768744648,34.627820691439574]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        var overlay_OpenStreetMapMonochrome_0 = L.tileLayer('http://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+            opacity: 1.0
+        });
+        overlay_OpenStreetMapMonochrome_0.addTo(map);
+        map.addLayer(overlay_OpenStreetMapMonochrome_0);
+        function pop_BikeAccidents_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Date</th>\
+                        <td>' + (feature.properties['Date'] !== null ? Autolinker.link(String(feature.properties['Date'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Age</th>\
+                        <td>' + (feature.properties['Age'] !== null ? Autolinker.link(String(feature.properties['Age'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Injury Type</th>\
+                        <td>' + (feature.properties['Injury Type'] !== null ? Autolinker.link(String(feature.properties['Injury Type'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Vehicle Type</th>\
+                        <td>' + (feature.properties['Vehicle Type'] !== null ? Autolinker.link(String(feature.properties['Vehicle Type'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Address</th>\
+                        <td>' + (feature.properties['Address'] !== null ? Autolinker.link(String(feature.properties['Address'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Link</th>\
+                        <td>' + (feature.properties['Link'] !== null ? Autolinker.link(String(feature.properties['Link'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_BikeAccidents_1_0(feature) {
+            switch(String(feature.properties['q2wHide_Injury Type_eng'])) {
+                case 'Death':
+                    return {
+                pane: 'pane_BikeAccidents_1',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(103,0,13,1.0)',
+            }
+                    break;
+                case 'Critical':
+                    return {
+                pane: 'pane_BikeAccidents_1',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(239,59,44,1.0)',
+            }
+                    break;
+                case 'Severe':
+                    return {
+                pane: 'pane_BikeAccidents_1',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,106,74,1.0)',
+            }
+                    break;
+                case 'Serious':
+                    return {
+                pane: 'pane_BikeAccidents_1',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,146,114,1.0)',
+            }
+                    break;
+                case 'Moderate':
+                    return {
+                pane: 'pane_BikeAccidents_1',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,187,161,1.0)',
+            }
+                    break;
+                case 'Minor':
+                    return {
+                pane: 'pane_BikeAccidents_1',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(254,224,210,1.0)',
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_BikeAccidents_1');
+        map.getPane('pane_BikeAccidents_1').style.zIndex = 401;
+        map.getPane('pane_BikeAccidents_1').style['mix-blend-mode'] = 'normal';
+        var layer_BikeAccidents_1 = new L.geoJson(json_BikeAccidents_1, {
+            attribution: '',
+            pane: 'pane_BikeAccidents_1',
+            onEachFeature: pop_BikeAccidents_1,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_BikeAccidents_1_0(feature));
+            },
+        });
+        var cluster_BikeAccidents_1 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+            spiderfyDistanceMultiplier: 2});
+        cluster_BikeAccidents_1.addLayer(layer_BikeAccidents_1);
+
+        bounds_group.addLayer(layer_BikeAccidents_1);
+        cluster_BikeAccidents_1.addTo(map);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'Bike Accidents<br /><table><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Death0.png" /></td><td>Death</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Critical1.png" /></td><td>Critical</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Severe2.png" /></td><td>Severe</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Serious3.png" /></td><td>Serious</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Moderate4.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Minor5.png" /></td><td>Minor</td></tr></table>': cluster_BikeAccidents_1,"OpenStreetMap Monochrome": overlay_OpenStreetMapMonochrome_0,}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
