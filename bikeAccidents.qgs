@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="3.2.3-Bonn" projectname="">
+<qgis projectname="" version="3.2.3-Bonn">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -19,35 +19,40 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <layer-tree-layer id="bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814" checked="Qt::Checked" providerKey="ogr" expanded="0" source="./qgis/bike_accidents_geo.gpkg|layername=bike_accidents_geo" name="Bike Accidents">
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="bike_accidents_geo_e0800355_9745_4d39_ac8f_a8ba750e5181" source="dbname='bikeAccidents' host=localhost port=5432 sslmode=disable authcfg=o5o8878 key='tid' srid=4326 type=Point table=&quot;public&quot;.&quot;bike_accidents_geo&quot; (geom) sql=" name="bike_accidents_geo" providerKey="postgres">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer id="bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339" checked="Qt::Unchecked" providerKey="postgres" expanded="0" source="dbname='bikeAccidents' host=localhost port=5432 sslmode=disable authcfg=o5o8878 key='tid' srid=4326 type=Point table=&quot;public&quot;.&quot;bike_accidents_sql&quot; (geom) sql=" name="bike_accidents_sql">
+    <layer-tree-layer checked="Qt::Unchecked" expanded="1" id="bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814" source="./qgis/bike_accidents_geo.gpkg|layername=bike_accidents_geo" name="Bike Accidents" providerKey="ogr">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer id="OpenStreetMap_Monochrome_13de42a1_b769_4232_8c90_d4f01ac7a5ba" checked="Qt::Checked" providerKey="wms" expanded="1" source="crs=EPSG:3857&amp;format&amp;referer=OpenStreetMap%20contributors,%20CC-BY-SA&amp;type=xyz&amp;url=http://tiles.wmflabs.org/bw-mapnik/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=19&amp;zmin=0" name="OpenStreetMap Monochrome">
+    <layer-tree-layer checked="Qt::Unchecked" expanded="0" id="bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339" source="dbname='bikeAccidents' host=localhost port=5432 sslmode=disable authcfg=o5o8878 key='tid' srid=4326 type=Point table=&quot;public&quot;.&quot;bike_accidents_sql&quot; (geom) sql=" name="bike_accidents_sql" providerKey="postgres">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="OpenStreetMap_Monochrome_13de42a1_b769_4232_8c90_d4f01ac7a5ba" source="crs=EPSG:3857&amp;format&amp;referer=OpenStreetMap%20contributors,%20CC-BY-SA&amp;type=xyz&amp;url=http://tiles.wmflabs.org/bw-mapnik/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=19&amp;zmin=0" name="OpenStreetMap Monochrome" providerKey="wms">
       <customproperties/>
     </layer-tree-layer>
     <custom-order enabled="0">
       <item>OpenStreetMap_Monochrome_13de42a1_b769_4232_8c90_d4f01ac7a5ba</item>
       <item>bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339</item>
       <item>bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814</item>
+      <item>bike_accidents_geo_e0800355_9745_4d39_ac8f_a8ba750e5181</item>
     </custom-order>
   </layer-tree-group>
-  <snapping-settings mode="2" tolerance="12" enabled="0" intersection-snapping="0" type="1" unit="1">
+  <snapping-settings unit="1" tolerance="12" intersection-snapping="0" mode="2" type="1" enabled="0">
     <individual-layer-settings>
-      <layer-setting id="bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814" units="1" tolerance="12" enabled="0" type="1"/>
-      <layer-setting id="bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339" units="1" tolerance="12" enabled="0" type="1"/>
+      <layer-setting tolerance="12" id="bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339" type="1" units="1" enabled="0"/>
+      <layer-setting tolerance="12" id="bike_accidents_geo_e0800355_9745_4d39_ac8f_a8ba750e5181" type="1" units="1" enabled="0"/>
+      <layer-setting tolerance="12" id="bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814" type="1" units="1" enabled="0"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>34.54409446716308452</xmin>
-      <ymin>31.22784051895141744</ymin>
-      <xmax>35.41678199768066548</xmax>
-      <ymax>32.90370931625366069</ymax>
+      <xmin>34.55752460493686584</xmin>
+      <ymin>31.71319063520046555</ymin>
+      <xmax>34.67188997496450753</xmax>
+      <ymax>31.93281260574431357</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -65,26 +70,31 @@
     <rendermaptile>0</rendermaptile>
   </mapcanvas>
   <legend updateDrawingOrder="true">
-    <legendlayer showFeatureCount="0" open="false" checked="Qt::Checked" drawingOrder="-1" name="Bike Accidents">
-      <filegroup open="false" hidden="false">
-        <legendlayerfile visible="1" layerid="bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814" isInOverview="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer showFeatureCount="0" open="false" checked="Qt::Unchecked" drawingOrder="-1" name="bike_accidents_sql">
-      <filegroup open="false" hidden="false">
-        <legendlayerfile visible="0" layerid="bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339" isInOverview="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer showFeatureCount="0" open="true" checked="Qt::Checked" drawingOrder="-1" name="OpenStreetMap Monochrome">
+    <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" drawingOrder="-1" name="bike_accidents_geo">
       <filegroup open="true" hidden="false">
-        <legendlayerfile visible="1" layerid="OpenStreetMap_Monochrome_13de42a1_b769_4232_8c90_d4f01ac7a5ba" isInOverview="0"/>
+        <legendlayerfile layerid="bike_accidents_geo_e0800355_9745_4d39_ac8f_a8ba750e5181" isInOverview="0" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer checked="Qt::Unchecked" showFeatureCount="0" open="true" drawingOrder="-1" name="Bike Accidents">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814" isInOverview="0" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer checked="Qt::Unchecked" showFeatureCount="0" open="false" drawingOrder="-1" name="bike_accidents_sql">
+      <filegroup open="false" hidden="false">
+        <legendlayerfile layerid="bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339" isInOverview="0" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" drawingOrder="-1" name="OpenStreetMap Monochrome">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="OpenStreetMap_Monochrome_13de42a1_b769_4232_8c90_d4f01ac7a5ba" isInOverview="0" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
   <mapViewDocks/>
   <mapViewDocks3D/>
   <projectlayers>
-    <maplayer hasScaleBasedVisibilityFlag="0" maxScale="0" minScale="1e+8" autoRefreshTime="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" type="raster">
+    <maplayer refreshOnNotifyMessage="" minScale="1e+8" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" type="raster">
       <extent>
         <xmin>-20037508.34278924390673637</xmin>
         <ymin>-20037508.34278925508260727</ymin>
@@ -128,7 +138,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent/>
@@ -156,13 +166,13 @@
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
         </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation saturation="0" colorizeBlue="128" colorizeStrength="100" grayscaleMode="0" colorizeGreen="128" colorizeRed="255" colorizeOn="0"/>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeGreen="128" grayscaleMode="0" saturation="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100" colorizeBlue="128"/>
         <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer hasScaleBasedVisibilityFlag="0" labelsEnabled="0" maxScale="0" simplifyDrawingTol="1" geometry="Point" minScale="1e+8" autoRefreshTime="0" simplifyMaxScale="1" simplifyLocal="1" refreshOnNotifyMessage="" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" type="vector" simplifyDrawingHints="0" readOnly="0" simplifyAlgorithm="0">
+    <maplayer refreshOnNotifyMessage="" minScale="1e+8" geometry="Point" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingHints="0" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" readOnly="0" type="vector" simplifyDrawingTol="1" simplifyLocal="1" labelsEnabled="0" simplifyAlgorithm="0" simplifyMaxScale="1">
       <extent>
         <xmin>34.56487274169921875</xmin>
         <ymin>31.26774215698242188</ymin>
@@ -219,7 +229,7 @@
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial crs="" maxy="0" dimensions="2" maxz="0" maxx="0" miny="0" minx="0" minz="0"/>
+          <spatial dimensions="2" crs="" miny="0" maxx="0" maxy="0" minx="0" minz="0" maxz="0"/>
           <temporal>
             <period>
               <start></start>
@@ -238,18 +248,18 @@
         <map-layer-style name="default"/>
       </map-layer-style-manager>
       <auxiliaryLayer/>
-      <renderer-v2 attr="Injury Type_eng" forceraster="0" enableorderby="1" symbollevels="0" type="categorizedSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" enableorderby="1" attr="Injury Type_eng" type="categorizedSymbol">
         <categories>
-          <category value="Death" label="Death" render="true" symbol="0"/>
-          <category value="Critical" label="Critical" render="true" symbol="1"/>
-          <category value="Severe" label="Severe" render="true" symbol="2"/>
-          <category value="Serious" label="Serious" render="true" symbol="3"/>
-          <category value="Moderate" label="Moderate" render="true" symbol="4"/>
-          <category value="Minor" label="Minor" render="true" symbol="5"/>
+          <category symbol="0" label="Death" value="Death" render="true"/>
+          <category symbol="1" label="Critical" value="Critical" render="true"/>
+          <category symbol="2" label="Severe" value="Severe" render="true"/>
+          <category symbol="3" label="Serious" value="Serious" render="true"/>
+          <category symbol="4" label="Moderate" value="Moderate" render="true"/>
+          <category symbol="5" label="Minor" value="Minor" render="true"/>
         </categories>
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="103,0,13,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -270,15 +280,15 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="1">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="1">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="239,59,44,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -299,15 +309,15 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="2">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="2">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="251,106,74,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -328,15 +338,15 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="3">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="3">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="252,146,114,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -357,15 +367,15 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="4">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="4">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="252,187,161,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -386,15 +396,15 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="5">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="5">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="254,224,210,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -415,17 +425,17 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <source-symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="3,235,92,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -446,9 +456,9 @@
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
@@ -464,7 +474,7 @@
         <rotation/>
         <sizescale/>
         <orderby>
-          <orderByClause asc="1" nullsFirst="0">"Injury Type"</orderByClause>
+          <orderByClause nullsFirst="0" asc="1">"Injury Type"</orderByClause>
         </orderby>
       </renderer-v2>
       <customproperties>
@@ -487,18 +497,18 @@
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-        <DiagramCategory labelPlacementMethod="XHeight" backgroundAlpha="255" maxScaleDenominator="1e+8" penAlpha="255" penWidth="0" rotationOffset="270" lineSizeScale="3x:0,0,0,0,0,0" opacity="1" backgroundColor="#ffffff" width="15" minimumSize="0" barWidth="5" diagramOrientation="Up" lineSizeType="MM" sizeType="MM" penColor="#000000" minScaleDenominator="0" enabled="0" scaleDependency="Area" sizeScale="3x:0,0,0,0,0,0" height="15" scaleBasedVisibility="0">
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory enabled="0" backgroundAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" diagramOrientation="Up" minimumSize="0" sizeType="MM" barWidth="5" height="15" penWidth="0" maxScaleDenominator="1e+8" lineSizeType="MM" width="15" scaleBasedVisibility="0" sizeScale="3x:0,0,0,0,0,0" backgroundColor="#ffffff" labelPlacementMethod="XHeight" minScaleDenominator="0" penAlpha="255" scaleDependency="Area" rotationOffset="270" opacity="1" penColor="#000000">
           <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
           <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings obstacle="0" showAll="1" zIndex="0" placement="0" dist="0" priority="0" linePlacementFlags="18">
+      <DiagramLayerSettings linePlacementFlags="18" obstacle="0" dist="0" zIndex="0" priority="0" showAll="1" placement="0">
         <properties>
           <Option type="Map">
-            <Option value="" type="QString" name="name"/>
+            <Option type="QString" value="" name="name"/>
             <Option name="properties"/>
-            <Option value="collection" type="QString" name="type"/>
+            <Option type="QString" value="collection" name="type"/>
           </Option>
         </properties>
       </DiagramLayerSettings>
@@ -521,8 +531,8 @@
           <editWidget type="TextEdit">
             <config>
               <Option type="Map">
-                <Option value="false" type="bool" name="IsMultiline"/>
-                <Option value="false" type="bool" name="UseHtml"/>
+                <Option type="bool" value="false" name="IsMultiline"/>
+                <Option type="bool" value="false" name="UseHtml"/>
               </Option>
             </config>
           </editWidget>
@@ -538,8 +548,8 @@
           <editWidget type="TextEdit">
             <config>
               <Option type="Map">
-                <Option value="false" type="bool" name="IsMultiline"/>
-                <Option value="false" type="bool" name="UseHtml"/>
+                <Option type="bool" value="false" name="IsMultiline"/>
+                <Option type="bool" value="false" name="UseHtml"/>
               </Option>
             </config>
           </editWidget>
@@ -548,8 +558,8 @@
           <editWidget type="TextEdit">
             <config>
               <Option type="Map">
-                <Option value="false" type="bool" name="IsMultiline"/>
-                <Option value="false" type="bool" name="UseHtml"/>
+                <Option type="bool" value="false" name="IsMultiline"/>
+                <Option type="bool" value="false" name="UseHtml"/>
               </Option>
             </config>
           </editWidget>
@@ -633,122 +643,122 @@
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias index="0" field="fid" name=""/>
-        <alias index="1" field="index" name=""/>
-        <alias index="2" field="Date" name=""/>
-        <alias index="3" field="Age" name=""/>
-        <alias index="4" field="Injury Type" name=""/>
-        <alias index="5" field="Vehicle Type" name=""/>
-        <alias index="6" field="Street" name=""/>
-        <alias index="7" field="Detailed Street" name=""/>
-        <alias index="8" field="City" name=""/>
-        <alias index="9" field="Address" name=""/>
-        <alias index="10" field="Link" name=""/>
-        <alias index="11" field="location" name=""/>
-        <alias index="12" field="lat" name=""/>
-        <alias index="13" field="long" name=""/>
-        <alias index="14" field="Age Range" name=""/>
-        <alias index="15" field="WKT" name=""/>
-        <alias index="16" field="Injury Type_eng" name=""/>
+        <alias field="fid" index="0" name=""/>
+        <alias field="index" index="1" name=""/>
+        <alias field="Date" index="2" name=""/>
+        <alias field="Age" index="3" name=""/>
+        <alias field="Injury Type" index="4" name=""/>
+        <alias field="Vehicle Type" index="5" name=""/>
+        <alias field="Street" index="6" name=""/>
+        <alias field="Detailed Street" index="7" name=""/>
+        <alias field="City" index="8" name=""/>
+        <alias field="Address" index="9" name=""/>
+        <alias field="Link" index="10" name=""/>
+        <alias field="location" index="11" name=""/>
+        <alias field="lat" index="12" name=""/>
+        <alias field="long" index="13" name=""/>
+        <alias field="Age Range" index="14" name=""/>
+        <alias field="WKT" index="15" name=""/>
+        <alias field="Injury Type_eng" index="16" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>location</attribute>
-        <attribute>Detailed Street</attribute>
         <attribute>long</attribute>
-        <attribute>City</attribute>
-        <attribute>lat</attribute>
+        <attribute>location</attribute>
         <attribute>Street</attribute>
+        <attribute>lat</attribute>
+        <attribute>City</attribute>
         <attribute>Age Range</attribute>
+        <attribute>Detailed Street</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>location</attribute>
-        <attribute>Detailed Street</attribute>
         <attribute>long</attribute>
-        <attribute>City</attribute>
-        <attribute>lat</attribute>
+        <attribute>location</attribute>
         <attribute>Street</attribute>
+        <attribute>lat</attribute>
+        <attribute>City</attribute>
         <attribute>Age Range</attribute>
+        <attribute>Detailed Street</attribute>
       </excludeAttributesWFS>
       <defaults>
-        <default field="fid" applyOnUpdate="0" expression=""/>
-        <default field="index" applyOnUpdate="0" expression=""/>
-        <default field="Date" applyOnUpdate="0" expression=""/>
-        <default field="Age" applyOnUpdate="0" expression=""/>
-        <default field="Injury Type" applyOnUpdate="0" expression=""/>
-        <default field="Vehicle Type" applyOnUpdate="0" expression=""/>
-        <default field="Street" applyOnUpdate="0" expression=""/>
-        <default field="Detailed Street" applyOnUpdate="0" expression=""/>
-        <default field="City" applyOnUpdate="0" expression=""/>
-        <default field="Address" applyOnUpdate="0" expression=""/>
-        <default field="Link" applyOnUpdate="0" expression=""/>
-        <default field="location" applyOnUpdate="0" expression=""/>
-        <default field="lat" applyOnUpdate="0" expression=""/>
-        <default field="long" applyOnUpdate="0" expression=""/>
-        <default field="Age Range" applyOnUpdate="0" expression=""/>
-        <default field="WKT" applyOnUpdate="0" expression=""/>
-        <default field="Injury Type_eng" applyOnUpdate="0" expression=""/>
+        <default field="fid" expression="" applyOnUpdate="0"/>
+        <default field="index" expression="" applyOnUpdate="0"/>
+        <default field="Date" expression="" applyOnUpdate="0"/>
+        <default field="Age" expression="" applyOnUpdate="0"/>
+        <default field="Injury Type" expression="" applyOnUpdate="0"/>
+        <default field="Vehicle Type" expression="" applyOnUpdate="0"/>
+        <default field="Street" expression="" applyOnUpdate="0"/>
+        <default field="Detailed Street" expression="" applyOnUpdate="0"/>
+        <default field="City" expression="" applyOnUpdate="0"/>
+        <default field="Address" expression="" applyOnUpdate="0"/>
+        <default field="Link" expression="" applyOnUpdate="0"/>
+        <default field="location" expression="" applyOnUpdate="0"/>
+        <default field="lat" expression="" applyOnUpdate="0"/>
+        <default field="long" expression="" applyOnUpdate="0"/>
+        <default field="Age Range" expression="" applyOnUpdate="0"/>
+        <default field="WKT" expression="" applyOnUpdate="0"/>
+        <default field="Injury Type_eng" expression="" applyOnUpdate="0"/>
       </defaults>
       <constraints>
-        <constraint exp_strength="0" field="fid" unique_strength="1" notnull_strength="1" constraints="3"/>
-        <constraint exp_strength="0" field="index" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Date" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Age" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Injury Type" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Vehicle Type" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Street" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Detailed Street" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="City" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Address" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Link" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="location" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="lat" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="long" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Age Range" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="WKT" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Injury Type_eng" unique_strength="0" notnull_strength="0" constraints="0"/>
+        <constraint constraints="3" field="fid" notnull_strength="1" unique_strength="1" exp_strength="0"/>
+        <constraint constraints="0" field="index" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Date" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Age" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Injury Type" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Vehicle Type" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Street" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Detailed Street" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="City" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Address" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Link" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="location" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="lat" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="long" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Age Range" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="WKT" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Injury Type_eng" notnull_strength="0" unique_strength="0" exp_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint exp="" field="fid" desc=""/>
-        <constraint exp="" field="index" desc=""/>
-        <constraint exp="" field="Date" desc=""/>
-        <constraint exp="" field="Age" desc=""/>
-        <constraint exp="" field="Injury Type" desc=""/>
-        <constraint exp="" field="Vehicle Type" desc=""/>
-        <constraint exp="" field="Street" desc=""/>
-        <constraint exp="" field="Detailed Street" desc=""/>
-        <constraint exp="" field="City" desc=""/>
-        <constraint exp="" field="Address" desc=""/>
-        <constraint exp="" field="Link" desc=""/>
-        <constraint exp="" field="location" desc=""/>
-        <constraint exp="" field="lat" desc=""/>
-        <constraint exp="" field="long" desc=""/>
-        <constraint exp="" field="Age Range" desc=""/>
-        <constraint exp="" field="WKT" desc=""/>
-        <constraint exp="" field="Injury Type_eng" desc=""/>
+        <constraint field="fid" exp="" desc=""/>
+        <constraint field="index" exp="" desc=""/>
+        <constraint field="Date" exp="" desc=""/>
+        <constraint field="Age" exp="" desc=""/>
+        <constraint field="Injury Type" exp="" desc=""/>
+        <constraint field="Vehicle Type" exp="" desc=""/>
+        <constraint field="Street" exp="" desc=""/>
+        <constraint field="Detailed Street" exp="" desc=""/>
+        <constraint field="City" exp="" desc=""/>
+        <constraint field="Address" exp="" desc=""/>
+        <constraint field="Link" exp="" desc=""/>
+        <constraint field="location" exp="" desc=""/>
+        <constraint field="lat" exp="" desc=""/>
+        <constraint field="long" exp="" desc=""/>
+        <constraint field="Age Range" exp="" desc=""/>
+        <constraint field="WKT" exp="" desc=""/>
+        <constraint field="Injury Type_eng" exp="" desc=""/>
       </constraintExpressions>
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
       <attributetableconfig sortExpression="&quot;geom_copy&quot;" actionWidgetStyle="dropDown" sortOrder="1">
         <columns>
-          <column hidden="0" type="field" name="Date" width="-1"/>
-          <column hidden="0" type="field" name="Age" width="-1"/>
-          <column hidden="0" type="field" name="Injury Type" width="-1"/>
-          <column hidden="0" type="field" name="Vehicle Type" width="-1"/>
-          <column hidden="0" type="field" name="Street" width="-1"/>
-          <column hidden="0" type="field" name="Detailed Street" width="-1"/>
-          <column hidden="0" type="field" name="City" width="-1"/>
-          <column hidden="0" type="field" name="Address" width="-1"/>
-          <column hidden="0" type="field" name="Link" width="-1"/>
-          <column hidden="0" type="field" name="location" width="-1"/>
-          <column hidden="0" type="field" name="lat" width="-1"/>
-          <column hidden="0" type="field" name="long" width="-1"/>
-          <column hidden="0" type="field" name="Age Range" width="-1"/>
-          <column hidden="1" type="actions" width="-1"/>
-          <column hidden="0" type="field" name="index" width="-1"/>
-          <column hidden="0" type="field" name="WKT" width="-1"/>
-          <column hidden="0" type="field" name="Injury Type_eng" width="-1"/>
-          <column hidden="0" type="field" name="fid" width="-1"/>
+          <column width="-1" hidden="0" type="field" name="Date"/>
+          <column width="-1" hidden="0" type="field" name="Age"/>
+          <column width="-1" hidden="0" type="field" name="Injury Type"/>
+          <column width="-1" hidden="0" type="field" name="Vehicle Type"/>
+          <column width="-1" hidden="0" type="field" name="Street"/>
+          <column width="-1" hidden="0" type="field" name="Detailed Street"/>
+          <column width="-1" hidden="0" type="field" name="City"/>
+          <column width="-1" hidden="0" type="field" name="Address"/>
+          <column width="-1" hidden="0" type="field" name="Link"/>
+          <column width="-1" hidden="0" type="field" name="location"/>
+          <column width="-1" hidden="0" type="field" name="lat"/>
+          <column width="-1" hidden="0" type="field" name="long"/>
+          <column width="-1" hidden="0" type="field" name="Age Range"/>
+          <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="index"/>
+          <column width="-1" hidden="0" type="field" name="WKT"/>
+          <column width="-1" hidden="0" type="field" name="Injury Type_eng"/>
+          <column width="-1" hidden="0" type="field" name="fid"/>
         </columns>
       </attributetableconfig>
       <editform tolerant="1"></editform>
@@ -825,13 +835,629 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>field_1</previewExpression>
       <mapTip></mapTip>
     </maplayer>
-    <maplayer hasScaleBasedVisibilityFlag="0" labelsEnabled="0" maxScale="0" simplifyDrawingTol="1" geometry="Point" minScale="1e+8" autoRefreshTime="0" simplifyMaxScale="1" simplifyLocal="1" refreshOnNotifyMessage="" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" type="vector" simplifyDrawingHints="0" readOnly="0" simplifyAlgorithm="0">
+    <maplayer refreshOnNotifyMessage="" minScale="1e+8" geometry="Point" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingHints="0" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" readOnly="0" type="vector" simplifyDrawingTol="1" simplifyLocal="1" labelsEnabled="0" simplifyAlgorithm="0" simplifyMaxScale="1">
       <extent>
-        <xmin>34</xmin>
-        <ymin>31.26640899999999945</ymin>
+        <xmin>34.56487580000000293</xmin>
+        <ymin>31.26774580000000014</ymin>
         <xmax>35.39600080000000304</xmax>
         <ymax>32.86380520000000161</ymax>
       </extent>
+      <id>bike_accidents_geo_e0800355_9745_4d39_ac8f_a8ba750e5181</id>
+      <datasource>dbname='bikeAccidents' host=localhost port=5432 sslmode=disable authcfg=o5o8878 key='tid' srid=4326 type=Point table="public"."bike_accidents_geo" (geom) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>bike_accidents_geo</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+            <srsid>3452</srsid>
+            <srid>4326</srid>
+            <authid>EPSG:4326</authid>
+            <description>WGS 84</description>
+            <projectionacronym>longlat</projectionacronym>
+            <ellipsoidacronym>WGS84</ellipsoidacronym>
+            <geographicflag>true</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 forceraster="0" symbollevels="0" enableorderby="1" attr="Injury Type_eng" type="categorizedSymbol">
+        <categories>
+          <category symbol="0" label="Death" value="Death" render="true"/>
+          <category symbol="1" label="Critical" value="Critical" render="true"/>
+          <category symbol="2" label="Severe" value="Severe" render="true"/>
+          <category symbol="3" label="Serious" value="Serious" render="true"/>
+          <category symbol="4" label="Moderate" value="Moderate" render="true"/>
+          <category symbol="5" label="Minor" value="Minor" render="true"/>
+        </categories>
+        <symbols>
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="103,0,13,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="1">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="239,59,44,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="2">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="251,106,74,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="3">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="252,146,114,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="4">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="252,187,161,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="5">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="254,224,210,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.2"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <source-symbol>
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="3,235,92,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </source-symbol>
+        <colorramp type="gradient" name="[source]">
+          <prop k="color1" v="255,245,240,255"/>
+          <prop k="color2" v="103,0,13,255"/>
+          <prop k="discrete" v="0"/>
+          <prop k="rampType" v="gradient"/>
+          <prop k="stops" v="0.13;254,224,210,255:0.26;252,187,161,255:0.39;252,146,114,255:0.52;251,106,74,255:0.65;239,59,44,255:0.78;203,24,29,255:0.9;165,15,21,255"/>
+        </colorramp>
+        <rotation/>
+        <sizescale/>
+        <orderby>
+          <orderByClause nullsFirst="0" asc="1">"Injury Type"</orderByClause>
+        </orderby>
+      </renderer-v2>
+      <customproperties>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory enabled="0" backgroundAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" diagramOrientation="Up" minimumSize="0" sizeType="MM" barWidth="5" height="15" penWidth="0" maxScaleDenominator="1e+8" lineSizeType="MM" width="15" scaleBasedVisibility="0" sizeScale="3x:0,0,0,0,0,0" backgroundColor="#ffffff" labelPlacementMethod="XHeight" minScaleDenominator="0" penAlpha="255" scaleDependency="Area" rotationOffset="270" opacity="1" penColor="#000000">
+          <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings linePlacementFlags="18" obstacle="0" dist="0" zIndex="0" priority="0" showAll="1" placement="0">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="index">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Date">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="bool" value="false" name="IsMultiline"/>
+                <Option type="bool" value="false" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Age">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Injury Type">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="bool" value="false" name="IsMultiline"/>
+                <Option type="bool" value="false" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Vehicle Type">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="bool" value="false" name="IsMultiline"/>
+                <Option type="bool" value="false" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Street">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Detailed Street">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="City">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Address">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Link">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="location">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="lat">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="long">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Age Range">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="WKT">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Injury Type_eng">
+          <editWidget type="Hidden">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="index" index="0" name=""/>
+        <alias field="Date" index="1" name=""/>
+        <alias field="Age" index="2" name=""/>
+        <alias field="Injury Type" index="3" name=""/>
+        <alias field="Vehicle Type" index="4" name=""/>
+        <alias field="Street" index="5" name=""/>
+        <alias field="Detailed Street" index="6" name=""/>
+        <alias field="City" index="7" name=""/>
+        <alias field="Address" index="8" name=""/>
+        <alias field="Link" index="9" name=""/>
+        <alias field="location" index="10" name=""/>
+        <alias field="lat" index="11" name=""/>
+        <alias field="long" index="12" name=""/>
+        <alias field="Age Range" index="13" name=""/>
+        <alias field="WKT" index="14" name=""/>
+        <alias field="Injury Type_eng" index="15" name=""/>
+      </aliases>
+      <excludeAttributesWMS>
+        <attribute>long</attribute>
+        <attribute>location</attribute>
+        <attribute>Street</attribute>
+        <attribute>lat</attribute>
+        <attribute>City</attribute>
+        <attribute>Age Range</attribute>
+        <attribute>Detailed Street</attribute>
+      </excludeAttributesWMS>
+      <excludeAttributesWFS>
+        <attribute>long</attribute>
+        <attribute>location</attribute>
+        <attribute>Street</attribute>
+        <attribute>lat</attribute>
+        <attribute>City</attribute>
+        <attribute>Age Range</attribute>
+        <attribute>Detailed Street</attribute>
+      </excludeAttributesWFS>
+      <defaults>
+        <default field="index" expression="" applyOnUpdate="0"/>
+        <default field="Date" expression="" applyOnUpdate="0"/>
+        <default field="Age" expression="" applyOnUpdate="0"/>
+        <default field="Injury Type" expression="" applyOnUpdate="0"/>
+        <default field="Vehicle Type" expression="" applyOnUpdate="0"/>
+        <default field="Street" expression="" applyOnUpdate="0"/>
+        <default field="Detailed Street" expression="" applyOnUpdate="0"/>
+        <default field="City" expression="" applyOnUpdate="0"/>
+        <default field="Address" expression="" applyOnUpdate="0"/>
+        <default field="Link" expression="" applyOnUpdate="0"/>
+        <default field="location" expression="" applyOnUpdate="0"/>
+        <default field="lat" expression="" applyOnUpdate="0"/>
+        <default field="long" expression="" applyOnUpdate="0"/>
+        <default field="Age Range" expression="" applyOnUpdate="0"/>
+        <default field="WKT" expression="" applyOnUpdate="0"/>
+        <default field="Injury Type_eng" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" field="index" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Date" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Age" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Injury Type" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Vehicle Type" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Street" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Detailed Street" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="City" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Address" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Link" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="location" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="lat" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="long" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Age Range" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="WKT" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Injury Type_eng" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="index" exp="" desc=""/>
+        <constraint field="Date" exp="" desc=""/>
+        <constraint field="Age" exp="" desc=""/>
+        <constraint field="Injury Type" exp="" desc=""/>
+        <constraint field="Vehicle Type" exp="" desc=""/>
+        <constraint field="Street" exp="" desc=""/>
+        <constraint field="Detailed Street" exp="" desc=""/>
+        <constraint field="City" exp="" desc=""/>
+        <constraint field="Address" exp="" desc=""/>
+        <constraint field="Link" exp="" desc=""/>
+        <constraint field="location" exp="" desc=""/>
+        <constraint field="lat" exp="" desc=""/>
+        <constraint field="long" exp="" desc=""/>
+        <constraint field="Age Range" exp="" desc=""/>
+        <constraint field="WKT" exp="" desc=""/>
+        <constraint field="Injury Type_eng" exp="" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="&quot;geom_copy&quot;" actionWidgetStyle="dropDown" sortOrder="1">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="Date"/>
+          <column width="-1" hidden="0" type="field" name="Age"/>
+          <column width="-1" hidden="0" type="field" name="Injury Type"/>
+          <column width="-1" hidden="0" type="field" name="Vehicle Type"/>
+          <column width="-1" hidden="0" type="field" name="Street"/>
+          <column width="-1" hidden="0" type="field" name="Detailed Street"/>
+          <column width="-1" hidden="0" type="field" name="City"/>
+          <column width="-1" hidden="0" type="field" name="Address"/>
+          <column width="-1" hidden="0" type="field" name="Link"/>
+          <column width="-1" hidden="0" type="field" name="location"/>
+          <column width="-1" hidden="0" type="field" name="lat"/>
+          <column width="-1" hidden="0" type="field" name="long"/>
+          <column width="-1" hidden="0" type="field" name="Age Range"/>
+          <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="index"/>
+          <column width="-1" hidden="0" type="field" name="WKT"/>
+          <column width="-1" hidden="0" type="field" name="Injury Type_eng"/>
+          <column width="-1" hidden="0" type="field" name="fid"/>
+        </columns>
+      </attributetableconfig>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="Address"/>
+        <field editable="1" name="Age"/>
+        <field editable="1" name="Age Range"/>
+        <field editable="1" name="City"/>
+        <field editable="1" name="Date"/>
+        <field editable="1" name="Detailed Street"/>
+        <field editable="1" name="Injury Type"/>
+        <field editable="1" name="Injury Type_eng"/>
+        <field editable="1" name="Link"/>
+        <field editable="1" name="Street"/>
+        <field editable="1" name="Vehicle Type"/>
+        <field editable="1" name="WKT"/>
+        <field editable="1" name="fid"/>
+        <field editable="1" name="field_1"/>
+        <field editable="1" name="geom_copy"/>
+        <field editable="1" name="index"/>
+        <field editable="1" name="lat"/>
+        <field editable="1" name="location"/>
+        <field editable="1" name="long"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="Address"/>
+        <field labelOnTop="0" name="Age"/>
+        <field labelOnTop="0" name="Age Range"/>
+        <field labelOnTop="0" name="City"/>
+        <field labelOnTop="0" name="Date"/>
+        <field labelOnTop="0" name="Detailed Street"/>
+        <field labelOnTop="0" name="Injury Type"/>
+        <field labelOnTop="0" name="Injury Type_eng"/>
+        <field labelOnTop="0" name="Link"/>
+        <field labelOnTop="0" name="Street"/>
+        <field labelOnTop="0" name="Vehicle Type"/>
+        <field labelOnTop="0" name="WKT"/>
+        <field labelOnTop="0" name="fid"/>
+        <field labelOnTop="0" name="field_1"/>
+        <field labelOnTop="0" name="geom_copy"/>
+        <field labelOnTop="0" name="index"/>
+        <field labelOnTop="0" name="lat"/>
+        <field labelOnTop="0" name="location"/>
+        <field labelOnTop="0" name="long"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>field_1</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" minScale="1e+8" geometry="Point" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingHints="0" maxScale="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" readOnly="0" type="vector" simplifyDrawingTol="1" simplifyLocal="1" labelsEnabled="0" simplifyAlgorithm="0" simplifyMaxScale="1">
       <id>bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339</id>
       <datasource>dbname='bikeAccidents' host=localhost port=5432 sslmode=disable authcfg=o5o8878 key='tid' srid=4326 type=Point table="public"."bike_accidents_sql" (geom) sql=</datasource>
       <keywordList>
@@ -882,7 +1508,7 @@ def my_form_open(dialog, layer, feature):
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial crs="EPSG:4326" maxy="0" dimensions="2" maxz="0" maxx="0" miny="0" minx="0" minz="0"/>
+          <spatial dimensions="2" crs="EPSG:4326" miny="0" maxx="0" maxy="0" minx="0" minz="0" maxz="0"/>
           <temporal>
             <period>
               <start></start>
@@ -901,18 +1527,18 @@ def my_form_open(dialog, layer, feature):
         <map-layer-style name="default"/>
       </map-layer-style-manager>
       <auxiliaryLayer/>
-      <renderer-v2 attr="Injury Type_eng" forceraster="0" enableorderby="1" symbollevels="0" type="categorizedSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" enableorderby="1" attr="Injury Type_eng" type="categorizedSymbol">
         <categories>
-          <category value="Death" label="Death" render="true" symbol="0"/>
-          <category value="Critical" label="Critical" render="true" symbol="1"/>
-          <category value="Severe" label="Severe" render="true" symbol="2"/>
-          <category value="Serious" label="Serious" render="true" symbol="3"/>
-          <category value="Moderate" label="Moderate" render="true" symbol="4"/>
-          <category value="Minor" label="Minor" render="true" symbol="5"/>
+          <category symbol="0" label="Death" value="Death" render="true"/>
+          <category symbol="1" label="Critical" value="Critical" render="true"/>
+          <category symbol="2" label="Severe" value="Severe" render="true"/>
+          <category symbol="3" label="Serious" value="Serious" render="true"/>
+          <category symbol="4" label="Moderate" value="Moderate" render="true"/>
+          <category symbol="5" label="Minor" value="Minor" render="true"/>
         </categories>
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="103,0,13,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -933,15 +1559,15 @@ def my_form_open(dialog, layer, feature):
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="1">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="1">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="239,59,44,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -962,15 +1588,15 @@ def my_form_open(dialog, layer, feature):
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="2">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="2">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="251,106,74,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -991,15 +1617,15 @@ def my_form_open(dialog, layer, feature):
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="3">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="3">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="252,146,114,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -1020,15 +1646,15 @@ def my_form_open(dialog, layer, feature):
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="4">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="4">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="252,187,161,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -1049,15 +1675,15 @@ def my_form_open(dialog, layer, feature):
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="5">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="5">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="254,224,210,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -1078,17 +1704,17 @@ def my_form_open(dialog, layer, feature):
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <source-symbol>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+          <symbol alpha="1" type="marker" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
               <prop k="angle" v="0"/>
               <prop k="color" v="3,235,92,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -1109,9 +1735,9 @@ def my_form_open(dialog, layer, feature):
               <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" type="QString" name="name"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" type="QString" name="type"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
@@ -1127,7 +1753,7 @@ def my_form_open(dialog, layer, feature):
         <rotation/>
         <sizescale/>
         <orderby>
-          <orderByClause asc="1" nullsFirst="0">"Injury Type"</orderByClause>
+          <orderByClause nullsFirst="0" asc="1">"Injury Type"</orderByClause>
         </orderby>
       </renderer-v2>
       <customproperties>
@@ -1139,18 +1765,18 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-        <DiagramCategory labelPlacementMethod="XHeight" backgroundAlpha="255" maxScaleDenominator="1e+8" penAlpha="255" penWidth="0" rotationOffset="270" lineSizeScale="3x:0,0,0,0,0,0" opacity="1" backgroundColor="#ffffff" width="15" minimumSize="0" barWidth="5" diagramOrientation="Up" lineSizeType="MM" sizeType="MM" penColor="#000000" minScaleDenominator="0" enabled="0" scaleDependency="Area" sizeScale="3x:0,0,0,0,0,0" height="15" scaleBasedVisibility="0">
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory enabled="0" backgroundAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" diagramOrientation="Up" minimumSize="0" sizeType="MM" barWidth="5" height="15" penWidth="0" maxScaleDenominator="1e+8" lineSizeType="MM" width="15" scaleBasedVisibility="0" sizeScale="3x:0,0,0,0,0,0" backgroundColor="#ffffff" labelPlacementMethod="XHeight" minScaleDenominator="0" penAlpha="255" scaleDependency="Area" rotationOffset="270" opacity="1" penColor="#000000">
           <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
           <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings obstacle="0" showAll="1" zIndex="0" placement="0" dist="0" priority="0" linePlacementFlags="18">
+      <DiagramLayerSettings linePlacementFlags="18" obstacle="0" dist="0" zIndex="0" priority="0" showAll="1" placement="0">
         <properties>
           <Option type="Map">
-            <Option value="" type="QString" name="name"/>
+            <Option type="QString" value="" name="name"/>
             <Option name="properties"/>
-            <Option value="collection" type="QString" name="type"/>
+            <Option type="QString" value="collection" name="type"/>
           </Option>
         </properties>
       </DiagramLayerSettings>
@@ -1269,117 +1895,117 @@ def my_form_open(dialog, layer, feature):
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias index="0" field="index" name=""/>
-        <alias index="1" field="Date" name=""/>
-        <alias index="2" field="Age" name=""/>
-        <alias index="3" field="Injury Type" name=""/>
-        <alias index="4" field="Vehicle Type" name=""/>
-        <alias index="5" field="Street" name=""/>
-        <alias index="6" field="Detailed Street" name=""/>
-        <alias index="7" field="City" name=""/>
-        <alias index="8" field="Address" name=""/>
-        <alias index="9" field="Link" name=""/>
-        <alias index="10" field="location" name=""/>
-        <alias index="11" field="lat" name=""/>
-        <alias index="12" field="long" name=""/>
-        <alias index="13" field="Age Range" name=""/>
-        <alias index="14" field="WKT" name=""/>
-        <alias index="15" field="Injury Type_eng" name=""/>
+        <alias field="index" index="0" name=""/>
+        <alias field="Date" index="1" name=""/>
+        <alias field="Age" index="2" name=""/>
+        <alias field="Injury Type" index="3" name=""/>
+        <alias field="Vehicle Type" index="4" name=""/>
+        <alias field="Street" index="5" name=""/>
+        <alias field="Detailed Street" index="6" name=""/>
+        <alias field="City" index="7" name=""/>
+        <alias field="Address" index="8" name=""/>
+        <alias field="Link" index="9" name=""/>
+        <alias field="location" index="10" name=""/>
+        <alias field="lat" index="11" name=""/>
+        <alias field="long" index="12" name=""/>
+        <alias field="Age Range" index="13" name=""/>
+        <alias field="WKT" index="14" name=""/>
+        <alias field="Injury Type_eng" index="15" name=""/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>location</attribute>
-        <attribute>Detailed Street</attribute>
         <attribute>long</attribute>
-        <attribute>City</attribute>
-        <attribute>lat</attribute>
+        <attribute>location</attribute>
         <attribute>Street</attribute>
+        <attribute>lat</attribute>
+        <attribute>City</attribute>
         <attribute>Age Range</attribute>
+        <attribute>Detailed Street</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>location</attribute>
-        <attribute>Detailed Street</attribute>
         <attribute>long</attribute>
-        <attribute>City</attribute>
-        <attribute>lat</attribute>
+        <attribute>location</attribute>
         <attribute>Street</attribute>
+        <attribute>lat</attribute>
+        <attribute>City</attribute>
         <attribute>Age Range</attribute>
+        <attribute>Detailed Street</attribute>
       </excludeAttributesWFS>
       <defaults>
-        <default field="index" applyOnUpdate="0" expression=""/>
-        <default field="Date" applyOnUpdate="0" expression=""/>
-        <default field="Age" applyOnUpdate="0" expression=""/>
-        <default field="Injury Type" applyOnUpdate="0" expression=""/>
-        <default field="Vehicle Type" applyOnUpdate="0" expression=""/>
-        <default field="Street" applyOnUpdate="0" expression=""/>
-        <default field="Detailed Street" applyOnUpdate="0" expression=""/>
-        <default field="City" applyOnUpdate="0" expression=""/>
-        <default field="Address" applyOnUpdate="0" expression=""/>
-        <default field="Link" applyOnUpdate="0" expression=""/>
-        <default field="location" applyOnUpdate="0" expression=""/>
-        <default field="lat" applyOnUpdate="0" expression=""/>
-        <default field="long" applyOnUpdate="0" expression=""/>
-        <default field="Age Range" applyOnUpdate="0" expression=""/>
-        <default field="WKT" applyOnUpdate="0" expression=""/>
-        <default field="Injury Type_eng" applyOnUpdate="0" expression=""/>
+        <default field="index" expression="" applyOnUpdate="0"/>
+        <default field="Date" expression="" applyOnUpdate="0"/>
+        <default field="Age" expression="" applyOnUpdate="0"/>
+        <default field="Injury Type" expression="" applyOnUpdate="0"/>
+        <default field="Vehicle Type" expression="" applyOnUpdate="0"/>
+        <default field="Street" expression="" applyOnUpdate="0"/>
+        <default field="Detailed Street" expression="" applyOnUpdate="0"/>
+        <default field="City" expression="" applyOnUpdate="0"/>
+        <default field="Address" expression="" applyOnUpdate="0"/>
+        <default field="Link" expression="" applyOnUpdate="0"/>
+        <default field="location" expression="" applyOnUpdate="0"/>
+        <default field="lat" expression="" applyOnUpdate="0"/>
+        <default field="long" expression="" applyOnUpdate="0"/>
+        <default field="Age Range" expression="" applyOnUpdate="0"/>
+        <default field="WKT" expression="" applyOnUpdate="0"/>
+        <default field="Injury Type_eng" expression="" applyOnUpdate="0"/>
       </defaults>
       <constraints>
-        <constraint exp_strength="0" field="index" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Date" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Age" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Injury Type" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Vehicle Type" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Street" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Detailed Street" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="City" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Address" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Link" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="location" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="lat" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="long" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Age Range" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="WKT" unique_strength="0" notnull_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="Injury Type_eng" unique_strength="0" notnull_strength="0" constraints="0"/>
+        <constraint constraints="0" field="index" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Date" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Age" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Injury Type" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Vehicle Type" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Street" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Detailed Street" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="City" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Address" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Link" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="location" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="lat" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="long" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Age Range" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="WKT" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint constraints="0" field="Injury Type_eng" notnull_strength="0" unique_strength="0" exp_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint exp="" field="index" desc=""/>
-        <constraint exp="" field="Date" desc=""/>
-        <constraint exp="" field="Age" desc=""/>
-        <constraint exp="" field="Injury Type" desc=""/>
-        <constraint exp="" field="Vehicle Type" desc=""/>
-        <constraint exp="" field="Street" desc=""/>
-        <constraint exp="" field="Detailed Street" desc=""/>
-        <constraint exp="" field="City" desc=""/>
-        <constraint exp="" field="Address" desc=""/>
-        <constraint exp="" field="Link" desc=""/>
-        <constraint exp="" field="location" desc=""/>
-        <constraint exp="" field="lat" desc=""/>
-        <constraint exp="" field="long" desc=""/>
-        <constraint exp="" field="Age Range" desc=""/>
-        <constraint exp="" field="WKT" desc=""/>
-        <constraint exp="" field="Injury Type_eng" desc=""/>
+        <constraint field="index" exp="" desc=""/>
+        <constraint field="Date" exp="" desc=""/>
+        <constraint field="Age" exp="" desc=""/>
+        <constraint field="Injury Type" exp="" desc=""/>
+        <constraint field="Vehicle Type" exp="" desc=""/>
+        <constraint field="Street" exp="" desc=""/>
+        <constraint field="Detailed Street" exp="" desc=""/>
+        <constraint field="City" exp="" desc=""/>
+        <constraint field="Address" exp="" desc=""/>
+        <constraint field="Link" exp="" desc=""/>
+        <constraint field="location" exp="" desc=""/>
+        <constraint field="lat" exp="" desc=""/>
+        <constraint field="long" exp="" desc=""/>
+        <constraint field="Age Range" exp="" desc=""/>
+        <constraint field="WKT" exp="" desc=""/>
+        <constraint field="Injury Type_eng" exp="" desc=""/>
       </constraintExpressions>
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
       <attributetableconfig sortExpression="&quot;geom_copy&quot;" actionWidgetStyle="dropDown" sortOrder="1">
         <columns>
-          <column hidden="0" type="field" name="Date" width="-1"/>
-          <column hidden="0" type="field" name="Age" width="-1"/>
-          <column hidden="0" type="field" name="Injury Type" width="-1"/>
-          <column hidden="0" type="field" name="Vehicle Type" width="-1"/>
-          <column hidden="0" type="field" name="Street" width="-1"/>
-          <column hidden="0" type="field" name="Detailed Street" width="-1"/>
-          <column hidden="0" type="field" name="City" width="-1"/>
-          <column hidden="0" type="field" name="Address" width="-1"/>
-          <column hidden="0" type="field" name="Link" width="-1"/>
-          <column hidden="0" type="field" name="location" width="-1"/>
-          <column hidden="0" type="field" name="lat" width="-1"/>
-          <column hidden="0" type="field" name="long" width="-1"/>
-          <column hidden="0" type="field" name="Age Range" width="-1"/>
-          <column hidden="1" type="actions" width="-1"/>
-          <column hidden="0" type="field" name="index" width="-1"/>
-          <column hidden="0" type="field" name="WKT" width="-1"/>
-          <column hidden="0" type="field" name="Injury Type_eng" width="-1"/>
+          <column width="-1" hidden="0" type="field" name="Date"/>
+          <column width="-1" hidden="0" type="field" name="Age"/>
+          <column width="-1" hidden="0" type="field" name="Injury Type"/>
+          <column width="-1" hidden="0" type="field" name="Vehicle Type"/>
+          <column width="-1" hidden="0" type="field" name="Street"/>
+          <column width="-1" hidden="0" type="field" name="Detailed Street"/>
+          <column width="-1" hidden="0" type="field" name="City"/>
+          <column width="-1" hidden="0" type="field" name="Address"/>
+          <column width="-1" hidden="0" type="field" name="Link"/>
+          <column width="-1" hidden="0" type="field" name="location"/>
+          <column width="-1" hidden="0" type="field" name="lat"/>
+          <column width="-1" hidden="0" type="field" name="long"/>
+          <column width="-1" hidden="0" type="field" name="Age Range"/>
+          <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="index"/>
+          <column width="-1" hidden="0" type="field" name="WKT"/>
+          <column width="-1" hidden="0" type="field" name="Injury Type_eng"/>
         </columns>
       </attributetableconfig>
       <editform tolerant="1"></editform>
@@ -1461,29 +2087,68 @@ def my_form_open(dialog, layer, feature):
     <layer id="OpenStreetMap_Monochrome_13de42a1_b769_4232_8c90_d4f01ac7a5ba"/>
     <layer id="bike_accidents_sql_b2e82e91_aa47_4b28_bfbb_3dfa03b12339"/>
     <layer id="bike_accidents_geo_bf2cbe8b_2e0c_4ce3_8ff5_82d4f1daa814"/>
+    <layer id="bike_accidents_geo_e0800355_9745_4d39_ac8f_a8ba750e5181"/>
   </layerorder>
   <properties>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <Measurement>
+      <DistanceUnits type="QString"></DistanceUnits>
+      <AreaUnits type="QString"></AreaUnits>
+    </Measurement>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
     <PAL>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
       <CandidatesPoint type="int">16</CandidatesPoint>
       <CandidatesPolygon type="int">30</CandidatesPolygon>
-      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
-      <ShowingCandidates type="bool">false</ShowingCandidates>
       <SearchMethod type="int">0</SearchMethod>
-      <DrawRectOnly type="bool">false</DrawRectOnly>
       <CandidatesLine type="int">50</CandidatesLine>
-      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
       <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
     </PAL>
     <SpatialRefSys>
-      <ProjectCRSProj4String type="QString">+proj=longlat +datum=WGS84 +no_defs</ProjectCRSProj4String>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
       <ProjectCRSID type="int">3452</ProjectCRSID>
+      <ProjectCRSProj4String type="QString">+proj=longlat +datum=WGS84 +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
-    <Measurement>
-      <AreaUnits type="QString"></AreaUnits>
-      <DistanceUnits type="QString"></DistanceUnits>
-    </Measurement>
+    <qgis2web>
+      <Extent type="QString">Canvas extent</Extent>
+      <Searchlayer type="QString"></Searchlayer>
+      <Showpopupsonhover type="bool">false</Showpopupsonhover>
+      <mapFormat type="QString">leaflet</mapFormat>
+      <Precision type="QString">maintain</Precision>
+      <Minzoomlevel type="QString">1</Minzoomlevel>
+      <Geolocateuser type="bool">false</Geolocateuser>
+      <Maxzoomlevel type="QString">28</Maxzoomlevel>
+      <Highlightonhover type="bool">false</Highlightonhover>
+      <Addlayerslist type="QString">Collapsed</Addlayerslist>
+      <WidgetIcon type="QString">#000000</WidgetIcon>
+      <MinifyGeoJSONfiles type="bool">false</MinifyGeoJSONfiles>
+      <WidgetBackground type="QString">#f8f8f8</WidgetBackground>
+      <Measuretool type="QString">None</Measuretool>
+      <Exporter type="QString">folder</Exporter>
+      <Restricttoextent type="bool">false</Restricttoextent>
+      <Addaddresssearch type="bool">false</Addaddresssearch>
+      <Template type="QString">canvas-size</Template>
+      <Layersearch type="QString">None</Layersearch>
+      <MatchprojectCRS type="bool">false</MatchprojectCRS>
+      <Exportfolder type="QString">C:/Users/eliav/Documents/DataViz/Project/Bikes/BikeAccidentMapper</Exportfolder>
+    </qgis2web>
+    <Gui>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+    </Gui>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
       <Automatic type="bool">true</Automatic>
@@ -1491,44 +2156,6 @@ def my_form_open(dialog, layer, feature):
     <Measure>
       <Ellipsoid type="QString">WGS84</Ellipsoid>
     </Measure>
-    <Gui>
-      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
-      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
-      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
-      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-    </Gui>
-    <Legend>
-      <filterByMap type="bool">false</filterByMap>
-    </Legend>
-    <Paths>
-      <Absolute type="bool">false</Absolute>
-    </Paths>
-    <qgis2web>
-      <Geolocateuser type="bool">false</Geolocateuser>
-      <Precision type="QString">maintain</Precision>
-      <Layersearch type="QString">None</Layersearch>
-      <Addaddresssearch type="bool">false</Addaddresssearch>
-      <Measuretool type="QString">None</Measuretool>
-      <WidgetBackground type="QString">#f8f8f8</WidgetBackground>
-      <Searchlayer type="QString"></Searchlayer>
-      <Showpopupsonhover type="bool">false</Showpopupsonhover>
-      <Template type="QString">canvas-size</Template>
-      <Highlightonhover type="bool">false</Highlightonhover>
-      <WidgetIcon type="QString">#000000</WidgetIcon>
-      <Minzoomlevel type="QString">1</Minzoomlevel>
-      <MinifyGeoJSONfiles type="bool">false</MinifyGeoJSONfiles>
-      <Addlayerslist type="QString">Collapsed</Addlayerslist>
-      <Exporter type="QString">folder</Exporter>
-      <Extent type="QString">Canvas extent</Extent>
-      <Maxzoomlevel type="QString">28</Maxzoomlevel>
-      <Restricttoextent type="bool">false</Restricttoextent>
-      <Exportfolder type="QString">C:/Users/eliav/Documents/DataViz/Project/Bikes/BikeAccidentMapper</Exportfolder>
-      <MatchprojectCRS type="bool">false</MatchprojectCRS>
-      <mapFormat type="QString">leaflet</mapFormat>
-    </qgis2web>
   </properties>
   <visibility-presets/>
   <transformContext/>
