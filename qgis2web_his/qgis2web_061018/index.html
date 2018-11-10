@@ -8,10 +8,12 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/MarkerCluster.css">
+        <link rel="stylesheet" href="css/MarkerCluster.Default.css">
         <style>
         #map {
-            width: 801px;
-            height: 548px;
+            width: 1143px;
+            height: 557px;
         }
         </style>
         <title></title>
@@ -28,11 +30,12 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+        <script src="js/leaflet.markercluster.js"></script>
         <script src="data/BikeAccidents_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[31.903139962535768,34.58660405446461],[32.22336213205947,35.05520755895076]]);
+        }).fitBounds([[31.227840518951417,33.257765892131914],[32.90370931625366,36.703110572711836]]);
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
@@ -45,10 +48,6 @@
         map.addLayer(overlay_OpenStreetMapMonochrome_0);
         function pop_BikeAccidents_1(feature, layer) {
             var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">fid</th>\
-                        <td>' + (feature.properties['fid'] !== null ? Autolinker.link(String(feature.properties['fid'])) : '') + '</td>\
-                    </tr>\
                     <tr>\
                         <th scope="row">Date</th>\
                         <td>' + (feature.properties['Date'] !== null ? Autolinker.link(String(feature.properties['Date'])) : '') + '</td>\
@@ -66,12 +65,12 @@
                         <td>' + (feature.properties['Vehicle Type'] !== null ? Autolinker.link(String(feature.properties['Vehicle Type'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Link</th>\
-                        <td>' + (feature.properties['Link'] !== null ? Autolinker.link(String(feature.properties['Link'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Address</th>\
                         <td>' + (feature.properties['Address'] !== null ? Autolinker.link(String(feature.properties['Address'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Link</th>\
+                        <td>' + (feature.properties['Link'] !== null ? Autolinker.link(String(feature.properties['Link'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -186,10 +185,14 @@
                 return L.circleMarker(latlng, style_BikeAccidents_1_0(feature));
             },
         });
+        var cluster_BikeAccidents_1 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+            spiderfyDistanceMultiplier: 2});
+        cluster_BikeAccidents_1.addLayer(layer_BikeAccidents_1);
+
         bounds_group.addLayer(layer_BikeAccidents_1);
-        map.addLayer(layer_BikeAccidents_1);
+        cluster_BikeAccidents_1.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Bike Accidents<br /><table><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Death0.png" /></td><td>Death</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Critical1.png" /></td><td>Critical</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Severe2.png" /></td><td>Severe</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Serious3.png" /></td><td>Serious</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Moderate4.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Minor5.png" /></td><td>Minor</td></tr></table>': layer_BikeAccidents_1,"OpenStreetMap Monochrome": overlay_OpenStreetMapMonochrome_0,}).addTo(map);
+        L.control.layers(baseMaps,{'Bike Accidents<br /><table><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Death0.png" /></td><td>Death</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Critical1.png" /></td><td>Critical</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Severe2.png" /></td><td>Severe</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Serious3.png" /></td><td>Serious</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Moderate4.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/BikeAccidents_1_Minor5.png" /></td><td>Minor</td></tr></table>': cluster_BikeAccidents_1,"OpenStreetMap Monochrome": overlay_OpenStreetMapMonochrome_0,}).addTo(map);
         setBounds();
         </script>
     </body>
